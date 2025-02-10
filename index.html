@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Te gustaria salir conmigo?</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tenor-gif-embed" data-postid="2871482820979272488" data-share-method="host" data-aspect-ratio="1.28351" data-width="100%"><a href="https://tenor.com/view/mochi-pet-mochi-cat-cute-squiddy-gif-2871482820979272488">Mochi Pet GIF</a>from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1>¿Quieres ser mi san valentin? 💘 🥰</h1>
+        <p>Eres la persona mas especial del mundo 🌍 </p>
+        <div class="btn">
+            <a href="si.html">SI</a>
+            <a href="no1.html">NO</a>
+        </div>
+
+        <audio id="bg-music" autoplay loop>
+            <source src="sound/QueBonita.mp3" type="audio/mpeg">
+            Tu navegador no soporta el audio.
+        </audio>
+
+        
+        <script>
+            let audio = document.getElementById("bg-music");
+        
+            // Verifica si hay una posición guardada y restáurala
+           // if (localStorage.getItem("musicTime")) {
+           //     audio.currentTime = parseFloat(localStorage.getItem("musicTime"));
+            //}
+        
+            // Guarda la posición actual del audio cada segundo
+            setInterval(() => {
+                localStorage.setItem("musicTime", audio.currentTime);
+            }, 1000);
+        
+            // Asegurar que el estado de reproducción se mantenga
+            localStorage.setItem("musicPlaying", "true");
+        </script>
+
+
+    </div>
+
+</body>
+</html>
+
