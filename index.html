@@ -27,6 +27,24 @@
             <source src="QueBonita.mp3" type="audio/mpeg">
             Tu navegador no soporta el audio.
         </audio>
+
+           <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let audio = document.getElementById("bg-music");
+        
+                // Intenta reproducir automáticamente cuando la página carga (puede fallar en algunos navegadores)
+                audio.play().catch(() => {
+                    console.log("Autoplay bloqueado. Esperando interacción del usuario...");
+                });
+        
+                // Activa el audio al hacer clic en cualquier parte de la página
+                document.body.addEventListener("click", function () {
+                    if (audio.paused) {
+                        audio.play();
+                    }
+                });
+            });
+        </script>
 <!-- 
         <script>
             let audio = document.getElementById("bg-music");
